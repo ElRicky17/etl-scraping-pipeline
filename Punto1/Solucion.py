@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from pymongo import MongoClient
 import time
 
-client = MongoClient("mongodb://192.168.1.6:27017")
+client = MongoClient("mongodb://"something here"")
 db = client["MercadoLibre"]
 collection = db["Productos"] 
 
