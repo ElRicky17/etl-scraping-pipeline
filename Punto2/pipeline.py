@@ -3,20 +3,20 @@ from pymongo import MongoClient
 import psycopg2
 from datetime import datetime
 
-client = MongoClient("mongodb://172.16.18.87:27017") #Hay que cambiar la ip
+client = MongoClient("mongodb://"something here"") 
 db = client["Sports"]
 pg_conn = psycopg2.connect(
     host="localhost",
     dbname="sports_dw",
     user="postgres",
-    password="12345678"
+    password=""something here""
 )
 
 class Pipeline:
     def __init__(self,sport):
         self.collection = db[sport]
         self.sport = sport
-        self.api_key = 'b2c81a14d5eb96c9475d0a5f7a0b2fcd'
+        self.api_key = '"something here"'
         self.data = None
         self.pg_cursor = pg_conn.cursor()
 
